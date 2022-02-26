@@ -29,7 +29,7 @@ body {
 
 .instagram-phone {
     margin-left: -35px;
-    background-image: url(/img/home-phones.png);
+    background-image: url(./img/home-phones.png);
     background-position: 0 0;
     background-size: 454px 618px;
     flex-basis: 454px;
