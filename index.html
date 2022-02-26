@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Instagram</title>
+</head>
+<body>
+    <div class="instagram-wrapper">
+        <div class="instagram-phone">
+            <div id="imagem-dinamica">
+                <img class="visivel" src="/img/f0c687aa6ec2.jpg">
+                <img src="/img/0a2d3016f375.jpg">
+                <img src="/img/6f03eb85463c.jpg">
+                <img src="/img/d6bf0c928b5a.jpg">
+            </div>
+        </div>
+        <div class="instagram-continue">
+            <div class="group">
+                <img src="./img/instagram-logo.png" class="instagram-logo" alt="instagram logo">
+                <div class="profile-photo">
+                    <img src="./img/perfil-instagram.jpg" alt="foto de perfil">
+                </div>
+                <a href="#" class="instagram-login">Continue como gabrielaan</a>
+                <a href="#" class="instagram-logout">Remover conta</a>
+            </div>
+            <div class="group">
+                <p class="not-account">Não é gabrielaan?</p>
+                <p class="not-account">
+                    <span class="link-blue">Alternar contas</span>
+                    ou
+                    <span class="link-blue">Inscreva-se</span>
+                </p>
+            </div>
+            <div class="get-the-app">
+                <p class="get-app">Baixe o aplicativo</p>
+                <div class="download">
+                    <a href="#" class="app-download"></a>
+                    <a href="#" class="app-download"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer role="contentinfo">
+        <div class="rodape">
+            <div class="rodape-superior">
+                <div>
+                    <div class="texto"> Meta</div>
+                    <div class="texto"> Sobre</div>
+                    <div class="texto"> Blog</div>
+                    <div class="texto"> Carreiras</div>
+                    <div class="texto"> Ajuda</div>
+                    <div class="texto"> API</div>
+                    <div class="texto"> Privacidade</div>
+                    <div class="texto"> Termos</div>
+                    <div class="texto"> Principais contas</div>
+                    <div class="texto"> Hashtags</div>
+                    <div class="texto"> Localização</div>
+                    <div class="texto"> Instagran Lite</div>
+                </div>
+                <div>
+                    <div class="texto"> Dança</div>
+                    <div class="texto"> Comida e bebida</div>
+                    <div class="texto"> Casa e jardim</div>
+                    <div class="texto"> Música</div>
+                    <div class="texto"> Artes visuais</div>
+                </div>
+            </div>
+
+            <div class="rodape-inferior">
+                <div>
+                    <div class="texto">Portugues (Brasil)</div>
+                </div>
+                <div>
+                    <div class="texto"><b>Instagran Fake!!! Não confudir! Feito para estudos!</b></div>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+    
+</body>
+</html>
+
+<script>
+    const tempo = 6000, imagens = document.querySelectorAll("#imagem-dinamica img");
+    let currentImageIndex = 0,
+        max = imagens.length;
+    
+    
+    function proximaImagem() {
+        imagens[currentImageIndex].classList.remove("visivel");
+        currentImageIndex++;
+        
+        if(currentImageIndex >= max)
+            currentImageIndex = 0;
+        
+        imagens[currentImageIndex].classList.add("visivel");
+
+    
+    }
+
+    function inicio (){
+        setInterval(() => {
+            //chama função para trocar a imagem
+            proximaImagem();
+        }, tempo)
+    }
+
+    window.addEventListener("load", inicio);
+</script>
